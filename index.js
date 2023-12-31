@@ -1,10 +1,5 @@
-function getRandom(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min);
-}
+let arr = Array.from({length: 3001}, (_, i) => i + 2000);
 
-var arr = [2165,2166,2167,2168,2169,2170,2171,2172,2173,2174,2175,2176,2177,2178,2179,2180,2181,2182,2183,2184,2185,2186,2187,2188,2189,2190,2191,2192,2193,2194,2195,2196,2197,2198,2199,2200,2201,2202,2203,2204,2205,2206];
 
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
@@ -56,19 +51,20 @@ function showPrize(){
     document.getElementById("empty1").style.display="block";
     document.getElementById("prize").style.display="block";
     document.getElementById("empty2").style.display="block";
+    if(screen.width <= 700)
     document.getElementById("container").style.marginTop = "50px"; 
 }
 
 function spin(){
     
-    for (var i = 0; i < 70; i++) { 
+    for (var i = 0; i < 90; i++) { 
         if(i<1){
-            setTimeout(confetti, 3600);
-            setTimeout(showPrize, 3600);
-            setTimeout(numberChangeFix, (70-i)*50);
+            setTimeout(confetti, 4600);
+            setTimeout(showPrize, 4600);
+            setTimeout(numberChangeFix, (90-i)*50);
         }
         else{
-            setTimeout(numberChange, (70-i)*50);
+            setTimeout(numberChange, (90-i)*50);
         }
     } 
 }
